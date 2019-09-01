@@ -2,9 +2,10 @@ package com.example.appchat.interact;
 
 import com.example.appchat.model.FriendToAdd;
 import com.example.appchat.model.LastMess;
-import com.example.appchat.model.request.ChangeAvatarRequest;
+import com.example.appchat.model.request.UpdateAvatar;
 import com.example.appchat.model.request.RegisterRequest;
 import com.example.appchat.model.response.BaseResponse;
+import com.example.appchat.model.response.FriendChated;
 import com.example.appchat.model.response.FriendResponse;
 import com.example.appchat.model.UserProfile;
 import com.example.appchat.model.request.LoginRequest;
@@ -14,7 +15,6 @@ import okhttp3.MultipartBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
-import retrofit2.http.HTTP;
 import retrofit2.http.Multipart;
 import retrofit2.http.POST;
 import retrofit2.http.Part;
@@ -51,7 +51,7 @@ public interface UserService {
 
     @POST("/users/changeAvatar")
     Call<UserProfile> changeAvartar(
-            @Body ChangeAvatarRequest changeAvatarRequest
+            @Body UpdateAvatar updateAvatar
     );
 
     @GET(value = "/user/getNotFriend")
@@ -62,5 +62,10 @@ public interface UserService {
     @POST(value = "/users/getAllLastMess")
     Call<List<MessageChatResponse>> getAllLastMess(
             @Body List<LastMess> lastMesses
+    );
+
+    @GET(value = "/users/getFriendSendedMess")
+    Call<List<FriendChated>> getFriendSendedMess(
+            @Query("userId") int userId
     );
 }
