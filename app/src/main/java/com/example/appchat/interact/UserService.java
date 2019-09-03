@@ -2,8 +2,10 @@ package com.example.appchat.interact;
 
 import com.example.appchat.model.FriendToAdd;
 import com.example.appchat.model.LastMess;
+import com.example.appchat.model.request.AddFriendRequest;
 import com.example.appchat.model.request.UpdateAvatar;
 import com.example.appchat.model.request.RegisterRequest;
+import com.example.appchat.model.response.AddFriendResponse;
 import com.example.appchat.model.response.BaseResponse;
 import com.example.appchat.model.response.FriendChated;
 import com.example.appchat.model.response.FriendResponse;
@@ -54,9 +56,9 @@ public interface UserService {
             @Body UpdateAvatar updateAvatar
     );
 
-    @GET(value = "/user/getNotFriend")
+    @GET(value = "/users/getAllNotFriend")
     Call<List<FriendToAdd>> getAllNotFriends(
-            @Query("userId") int id
+            @Query("userId") int userId
     );
 
     @POST(value = "/users/getAllLastMess")
@@ -66,6 +68,16 @@ public interface UserService {
 
     @GET(value = "/users/getFriendSendedMess")
     Call<List<FriendChated>> getFriendSendedMess(
+            @Query("userId") int userId
+    );
+
+    @POST(value = "/users/requestAddFriend")
+    Call<BaseResponse> requestAddFriend(
+            @Body AddFriendRequest addFriendRequest
+    );
+
+    @GET(value = "/users/getAllFriendWaitResponse")
+    Call<List<FriendToAdd>> getAllFriendWaitResponse(
             @Query("userId") int userId
     );
 }

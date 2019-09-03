@@ -1131,6 +1131,7 @@ drawable abc_textfield_search_activated_mtrl_alpha
 drawable abc_textfield_search_default_mtrl_alpha
 drawable abc_textfield_search_material
 drawable abc_vector_test
+drawable accept
 drawable add
 drawable avd_hide_password
 drawable avd_show_password
@@ -1253,6 +1254,7 @@ id async
 id auto
 id avatar_another
 id avatar_chat
+id avatar_friends_wait
 id avatar_main
 id backButton
 id back_main
@@ -1261,6 +1263,8 @@ id beginning
 id blocking
 id bottom
 id bounce
+id btn_accept_friends_wait
+id btn_add_friend
 id btn_back
 id btn_back_chat
 id btn_capture
@@ -1374,6 +1378,7 @@ id mtrl_internal_children_alpha_tag
 id multiply
 id name_of_another
 id name_of_chat_register
+id name_of_friends_wait
 id name_or_nickname
 id navigation_header_container
 id never
@@ -1407,6 +1412,7 @@ id pull_out
 id radio
 id rc_friend
 id rc_friends
+id rc_friends_wait
 id rc_images
 id rc_photo
 id rc_photo_in_setting_friend_chat
@@ -1579,6 +1585,8 @@ layout abc_tooltip
 layout actitivity_camrera
 layout activity_image_gallery
 layout activity_main
+layout adapter_friend_wait_response
+layout all_friend_frag
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar
@@ -1607,6 +1615,7 @@ layout frag_photo_image_in_chat
 layout frag_register
 layout frag_setting_friend_chat
 layout friend_chat
+layout friend_wait_response_frag
 layout item_receive_image
 layout item_send_image
 layout item_squareimageview
@@ -1634,7 +1643,6 @@ layout select_dialog_singlechoice_material
 layout send_message
 layout show_image_onmess
 layout support_simple_spinner_dropdown_item
-layout test
 layout user_chat
 mipmap ic_launcher
 mipmap ic_launcher_round
