@@ -4,7 +4,7 @@ public class  AddFriendRequest {
 
     private int sender_id;
     private int receiver_id;
-    private boolean is_sended;
+    private int is_send;
 
     public int getSender_id() {
         return sender_id;
@@ -22,11 +22,11 @@ public class  AddFriendRequest {
         this.receiver_id = receiver_id;
     }
 
-    public boolean isIs_sended() {
-        return is_sended;
+    public int getIs_send() {
+        return is_send;
     }
 
-    public void setIs_sended(boolean is_sended) {
-        this.is_sended = is_sended;
+    public void setIs_send(int is_send) {
+        this.is_send = is_send;
     }
 }

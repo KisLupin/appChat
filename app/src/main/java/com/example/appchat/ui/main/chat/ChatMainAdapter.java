@@ -6,6 +6,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.example.appchat.ui.main.addfriend.OtherFriendFragment;
+import com.example.appchat.ui.main.allfriend.AllFriendFrag;
 import com.example.appchat.ui.main.checkfriend.FriendWaitResponse;
 
 public class ChatMainAdapter extends FragmentPagerAdapter {
@@ -22,12 +23,15 @@ public class ChatMainAdapter extends FragmentPagerAdapter {
         if (position == 1){
             return new OtherFriendFragment();
         }
-        return new FriendWaitResponse();
+        if (position == 2){
+            return new FriendWaitResponse();
+        }
+        return new AllFriendFrag();
     }
 
     @Override
     public int getCount() {
-        return 3;
+        return 4;
     }
 
     @Nullable
@@ -39,7 +43,10 @@ public class ChatMainAdapter extends FragmentPagerAdapter {
         if (position == 1){
             return "Other Friend";
         }
-        return "Accept make Friend";
+        if (position == 2){
+            return "Accept make Friend";
+        }
+        return "All Friend";
     }
 
 }

@@ -14,15 +14,12 @@ import com.example.appchat.interact.Common;
 import com.example.appchat.interact.CommonData;
 import com.example.appchat.R;
 import com.example.appchat.model.LastMess;
-import com.example.appchat.model.response.BaseResponse;
 import com.example.appchat.model.response.FriendChated;
 import com.example.appchat.model.response.FriendResponse;
 import com.example.appchat.interact.UserService;
 import com.example.appchat.model.response.MessageChatResponse;
 import com.example.appchat.ui.chat.Chat;
-import com.example.appchat.ui.main.chat.FriendAdapter;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import retrofit2.Call;
@@ -51,29 +48,14 @@ public class FriendFrag extends Fragment implements FriendAdapter.IFriend {
         rcFriend.setLayoutManager(new LinearLayoutManager(getContext()));
         adapter = new FriendAdapter(this);
         rcFriend.setAdapter(adapter);
-        getAllFriend();
+        getAllFriendChat();
     }
 
-    private void getAllFriend(){
+    private void getAllFriendChat(){
         userService = Common.getUserService();
         if (  CommonData.getInstance().getUserProfile() == null ){
             return;
         }
-//        userService.getAllFriendOfUser(
-//                CommonData.getInstance().getUserProfile().getId())
-//                .enqueue(new Callback<BaseResponse<List<FriendResponse>>>() {
-//                    @Override
-//                    public void onResponse(Call<BaseResponse<List<FriendResponse>>> call, Response<BaseResponse<List<FriendResponse>>> response) {
-//                        friendResponses = response.body().getData();
-////                        getAllLastMess();
-//                        adapter.notifyDataSetChanged();
-//                    }
-//
-//                    @Override
-//                    public void onFailure(Call<BaseResponse<List<FriendResponse>>> call, Throwable t) {
-//                        t.printStackTrace();
-//                    }
-//                });
         userService.getFriendSendedMess(CommonData.getInstance().getUserProfile().getId())
                 .enqueue(new Callback<List<FriendChated>>() {
                     @Override

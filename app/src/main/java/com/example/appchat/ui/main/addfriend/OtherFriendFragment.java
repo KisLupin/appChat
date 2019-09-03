@@ -88,7 +88,7 @@ public class OtherFriendFragment extends Fragment implements AddFriendAdapter.IA
         final AddFriendRequest addFriendRequest = new AddFriendRequest();
         addFriendRequest.setSender_id(CommonData.getInstance().getUserProfile().getId());
         addFriendRequest.setReceiver_id(friendToAddList.get(pos).getId());
-        addFriendRequest.setIs_sended(true);
+        addFriendRequest.setIs_send(1);
         userService.requestAddFriend(addFriendRequest).enqueue(new Callback<BaseResponse>() {
             @Override
             public void onResponse(Call<BaseResponse> call, Response<BaseResponse> response) {

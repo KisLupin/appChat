@@ -59,10 +59,11 @@ public class FriendWaitResponse extends Fragment implements AdapterFriendWaitRes
 
                     @Override
                     public void onFailure(Call<List<FriendToAdd>> call, Throwable t) {
-
+                        t.printStackTrace();
                     }
                 });
     }
+
     @Override
     public int getCount() {
         if (friendToAddList == null){

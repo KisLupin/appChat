@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:2:1-33:12
-INJECTED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:2:1-33:12
-INJECTED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:2:1-33:12
-INJECTED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:2:1-33:12
+ADDED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:2:1-34:12
 MERGED from [androidx.databinding:databinding-adapters:3.5.0] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/8d968ed946853e14f7641e5d1ffd7ebe/databinding-adapters-3.5.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.databinding:databinding-runtime:3.5.0] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/e245de9ff396bbc01db2988fe2dcf579/databinding-runtime-3.5.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.0.0-alpha2] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/876438fe76c327ce43feb89c814b69a1/constraintlayout-2.0.0-alpha2/AndroidManifest.xml:2:1-11:12
@@ -54,20 +54,20 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/
 MERGED from [androidx.print:print:1.0.0] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/c78dc2f831de896d8d6d90481d16bce0/print-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/a4151e2035fccbb551e016f96d0000f0/lifecycle-viewmodel-2.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/f0242482827f2382b7bcad26afc23ac1/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
-INJECTED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:2:1-33:12
-INJECTED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:2:1-33:12
-INJECTED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:2:1-33:12
+INJECTED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:2:1-34:12
+INJECTED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:2:1-34:12
 	package
 		ADDED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:3:5-34
 		INJECTED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml
-		ADDED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:2:1-33:12
+		ADDED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:2:1-34:12
 		INJECTED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml
-		ADDED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:2:1-33:12
+		ADDED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:2:1-34:12
 		INJECTED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:2:11-69
@@ -126,19 +126,21 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/kislupin/.gradle
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/d375a18d05e24e66d77709f6863c689c/core-1.0.1/AndroidManifest.xml:22:18-86
 	android:supportsRtl
-		ADDED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:15:9-35
+		ADDED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:16:9-35
 	android:label
-		ADDED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:13:9-41
+		ADDED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:14:9-41
+	android:hardwareAccelerated
+		ADDED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:11:9-43
 	android:roundIcon
-		ADDED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:14:9-54
+		ADDED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:15:9-54
 	android:icon
-		ADDED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:12:9-43
+		ADDED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:13:9-43
 	android:allowBackup
-		ADDED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:11:9-35
+		ADDED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:12:9-35
 	android:theme
-		ADDED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:17:9-40
+		ADDED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:18:9-40
 	android:networkSecurityConfig
-		ADDED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:16:9-69
+		ADDED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:17:9-69
 activity#com.example.appchat.MainActivity
 ADDED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:19:9-25:20
 	android:name
