@@ -12,6 +12,8 @@ import com.example.appchat.model.response.FriendResponse;
 import com.example.appchat.model.UserProfile;
 import com.example.appchat.model.request.LoginRequest;
 import com.example.appchat.model.response.MessageChatResponse;
+import com.example.appchat.model.response.StoryFriendResponse;
+
 import java.util.List;
 import okhttp3.MultipartBody;
 import retrofit2.Call;
@@ -65,7 +67,10 @@ public interface UserService {
     Call<List<MessageChatResponse>> getAllLastMess(
             @Body List<LastMess> lastMesses
     );
-
+    @GET(value = "users/getAllFriendStory")
+    Call<BaseResponse<List<StoryFriendResponse>>> getAllFriendStory(
+            @Query("userId") int userId
+    );
     @GET(value = "/users/getFriendSendedMess")
     Call<List<FriendChated>> getFriendSendedMess(
             @Query("userId") int userId
