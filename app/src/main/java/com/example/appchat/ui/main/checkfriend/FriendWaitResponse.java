@@ -14,6 +14,8 @@ import com.example.appchat.interact.Common;
 import com.example.appchat.interact.CommonData;
 import com.example.appchat.interact.UserService;
 import com.example.appchat.model.FriendToAdd;
+import com.example.appchat.model.response.AddFriendResponse;
+import com.example.appchat.model.response.BaseResponse;
 import com.example.appchat.ui.main.addfriend.AddFriendAdapter;
 
 import java.util.List;
@@ -78,8 +80,48 @@ public class FriendWaitResponse extends Fragment implements AdapterFriendWaitRes
     }
 
     @Override
-    public void onClick(int pos) {
-        //remove icon and set db
+    public void onClickAccept(int pos) {
+        accepted(pos);
+    }
 
+    @Override
+    public void onClickDecline(int pos) {
+        decline(pos);
+    }
+
+    private void accepted(int pos){
+        AddFriendResponse addFriendResponse = new AddFriendResponse();
+        addFriendResponse.setReceiver_id(CommonData.getInstance().getUserProfile().getId());
+        addFriendResponse.setSender_id(friendToAddList.get(pos).getId());
+        userService.accepted(addFriendResponse).enqueue(new Callback<BaseResponse>() {
+            @Override
+            public void onResponse(Call<BaseResponse> call, Response<BaseResponse> response) {
+                System.out.println(response.message());
+                getAllFriendWaitAccepct();
+            }
+
+            @Override
+            public void onFailure(Call<BaseResponse> call, Throwable t) {
+                t.printStackTrace();
+            }
+        });
+    }
+
+    private void decline(int pos){
+        AddFriendResponse addFriendResponse = new AddFriendResponse();
+        addFriendResponse.setReceiver_id(CommonData.getInstance().getUserProfile().getId());
+        addFriendResponse.setSender_id(friendToAddList.get(pos).getId());
+        userService.decline(addFriendResponse).enqueue(new Callback<BaseResponse>() {
+            @Override
+            public void onResponse(Call<BaseResponse> call, Response<BaseResponse> response) {
+                System.out.println(response.message());
+                getAllFriendWaitAccepct();
+            }
+
+            @Override
+            public void onFailure(Call<BaseResponse> call, Throwable t) {
+
+            }
+        });
     }
 }

@@ -82,7 +82,6 @@ public class OtherFriendFragment extends Fragment implements AddFriendAdapter.IA
     @Override
     public void onClickItem(int position) {
         addFriend(position);
-        getFindFriend();
     }
 
     private void addFriend(int pos){
@@ -95,6 +94,7 @@ public class OtherFriendFragment extends Fragment implements AddFriendAdapter.IA
             public void onResponse(Call<BaseResponse> call, Response<BaseResponse> response) {
                 // update all_not_friend after remove Object after clicked add button
                 System.out.println(response.body().getMessage());
+                getFindFriend();
             }
             @Override
             public void onFailure(Call<BaseResponse> call, Throwable t) {

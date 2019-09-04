@@ -80,4 +80,15 @@ public interface UserService {
     Call<List<FriendToAdd>> getAllFriendWaitResponse(
             @Query("userId") int userId
     );
+
+    @POST(value = "/users/accepted")
+    Call<BaseResponse> accepted(
+            @Body AddFriendResponse addFriendResponse
+    );
+
+    @POST(value = "/users/decline")
+    Call<BaseResponse> decline(
+            @Body AddFriendResponse addFriendResponse
+    );
+
 }

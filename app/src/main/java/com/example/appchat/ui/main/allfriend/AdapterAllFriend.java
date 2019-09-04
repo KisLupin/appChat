@@ -48,7 +48,7 @@ public class AdapterAllFriend extends RecyclerView.Adapter<AdapterAllFriend.Hold
 
     @Override
     public int getItemCount() {
-        return 0;
+        return inter.getCount();
     }
 
     public interface IAllFriend{

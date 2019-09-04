@@ -1,6 +1,5 @@
 package com.example.appchat.ui.main.allfriend;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,8 +15,6 @@ import com.example.appchat.interact.CommonData;
 import com.example.appchat.interact.UserService;
 import com.example.appchat.model.response.BaseResponse;
 import com.example.appchat.model.response.FriendResponse;
-import com.example.appchat.ui.main.checkfriend.AdapterFriendWaitResponse;
-
 import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;

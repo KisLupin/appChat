@@ -3,8 +3,7 @@ package com.example.appchat.model.response;
 public class AddFriendResponse {
 
     private int sender_id;
-    private int receiver_id;
-    private boolean is_accepted;
+    private int receive_id;
 
     public int getSender_id() {
         return sender_id;
@@ -15,18 +14,11 @@ public class AddFriendResponse {
     }
 
     public int getReceiver_id() {
-        return receiver_id;
+        return receive_id;
     }
 
     public void setReceiver_id(int receiver_id) {
-        this.receiver_id = receiver_id;
+        this.receive_id = receiver_id;
     }
 
-    public boolean isIs_accepted() {
-        return is_accepted;
-    }
-
-    public void setIs_accepted(boolean is_accepted) {
-        this.is_accepted = is_accepted;
-    }
 }

@@ -24,9 +24,9 @@ public final class R {
         private id() {}
 
         public static final int bottom = 0x7f080030;
-        public static final int lay_down = 0x7f080091;
-        public static final int left = 0x7f080092;
-        public static final int pull_out = 0x7f0800c3;
+        public static final int lay_down = 0x7f080092;
+        public static final int left = 0x7f080093;
+        public static final int pull_out = 0x7f0800c4;
         public static final int right = 0x7f0800d1;
         public static final int top = 0x7f080127;
     }

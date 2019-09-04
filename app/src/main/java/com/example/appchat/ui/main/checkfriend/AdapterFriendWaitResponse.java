@@ -39,13 +39,13 @@ public class AdapterFriendWaitResponse extends RecyclerView.Adapter<AdapterFrien
         holder.addFriend.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                iFriendWait.onClick(holder.getAdapterPosition());
+                iFriendWait.onClickAccept(holder.getAdapterPosition());
             }
         });
         holder.decline.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                iFriendWait.onClick(holder.getAdapterPosition());
+                iFriendWait.onClickDecline(holder.getAdapterPosition());
             }
         });
 
@@ -59,7 +59,8 @@ public class AdapterFriendWaitResponse extends RecyclerView.Adapter<AdapterFrien
     public interface IFriendWait{
         int getCount();
         FriendToAdd getData(int pos);
-        void onClick(int pos);
+        void onClickAccept(int pos);
+        void onClickDecline(int pos);
     }
     static class HolderFriend extends RecyclerView.ViewHolder{
         private ImageView avatar;
