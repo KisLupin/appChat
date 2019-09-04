@@ -1418,6 +1418,7 @@ id rc_friends_wait
 id rc_images
 id rc_photo
 id rc_photo_in_setting_friend_chat
+id rc_story
 id re_password_register
 id rectangles
 id register
@@ -1590,6 +1591,7 @@ layout activity_image_gallery
 layout activity_main
 layout adapter_all_friends
 layout adapter_friend_wait_response
+layout adapter_story
 layout all_friend_frag
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -1647,6 +1649,7 @@ layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
 layout send_message
 layout show_image_onmess
+layout story
 layout support_simple_spinner_dropdown_item
 layout user_chat
 mipmap ic_launcher

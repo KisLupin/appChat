@@ -26,7 +26,7 @@ public class ChatFrag extends Fragment implements View.OnClickListener {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.frag_main,container,false);
+        return inflater.inflate(R.layout.frag_main, container, false);
     }
 
     @Override
@@ -46,16 +46,16 @@ public class ChatFrag extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.avatar_main:
                 openSettingAcc();
                 break;
         }
     }
 
-    private void openSettingAcc(){
+    private void openSettingAcc() {
         Intent intent = new Intent();
-        intent.setClass(getContext(),ManagerUserProfileFrag.class);
+        intent.setClass(getContext(), ManagerUserProfileFrag.class);
         startActivity(intent);
     }
 
@@ -67,4 +67,5 @@ public class ChatFrag extends Fragment implements View.OnClickListener {
                 .error(R.drawable.default_ava)
                 .into(ava);
     }
+
 }

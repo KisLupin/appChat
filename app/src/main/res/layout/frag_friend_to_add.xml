@@ -37,6 +37,12 @@
         </LinearLayout>
 
         <ImageView
+            android:layout_width="wrap_content"
+            android:id="@+id/btn_decline"
+            android:src="@drawable/decline"
+            android:layout_height="match_parent"/>
+
+        <ImageView
             android:id="@+id/btn_add_friend"
             android:layout_width="wrap_content"
             android:src="@drawable/add"

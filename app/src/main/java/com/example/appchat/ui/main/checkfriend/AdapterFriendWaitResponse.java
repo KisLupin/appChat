@@ -42,6 +42,12 @@ public class AdapterFriendWaitResponse extends RecyclerView.Adapter<AdapterFrien
                 iFriendWait.onClick(holder.getAdapterPosition());
             }
         });
+        holder.decline.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                iFriendWait.onClick(holder.getAdapterPosition());
+            }
+        });
 
     }
 
@@ -59,11 +65,13 @@ public class AdapterFriendWaitResponse extends RecyclerView.Adapter<AdapterFrien
         private ImageView avatar;
         private TextView username;
         private ImageView addFriend;
+        private ImageView decline;
         public HolderFriend(@NonNull View itemView) {
             super(itemView);
             username = itemView.findViewById(R.id.name_of_friends_wait);
             avatar = itemView.findViewById(R.id.avatar_friends_wait);
             addFriend = itemView.findViewById(R.id.btn_accept_friends_wait);
+            decline = itemView.findViewById(R.id.btn_decline);
         }
     }
 }

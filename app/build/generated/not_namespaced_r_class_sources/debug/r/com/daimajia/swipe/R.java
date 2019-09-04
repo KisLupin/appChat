@@ -27,8 +27,8 @@ public final class R {
         public static final int lay_down = 0x7f080091;
         public static final int left = 0x7f080092;
         public static final int pull_out = 0x7f0800c3;
-        public static final int right = 0x7f0800d0;
-        public static final int top = 0x7f080126;
+        public static final int right = 0x7f0800d1;
+        public static final int top = 0x7f080127;
     }
     public static final class styleable {
         private styleable() {}
