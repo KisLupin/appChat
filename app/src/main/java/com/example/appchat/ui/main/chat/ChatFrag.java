@@ -42,6 +42,13 @@ public class ChatFrag extends Fragment implements View.OnClickListener {
                 .into(ava);
         vp.setAdapter(new ChatMainAdapter(getChildFragmentManager()));
         ava.setOnClickListener(this);
+        getStory();
+    }
+
+    private void getStory() {
+        getFragmentManager().beginTransaction()
+                .add(R.id.story, new StoryFriendFrag(), StoryFriendFrag.class.getName())
+                .commit();
     }
 
     @Override
