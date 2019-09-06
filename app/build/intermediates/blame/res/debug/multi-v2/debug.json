@@ -1399,6 +1399,21 @@
             ]
         },
         {
+            "outputFile": "/Users/kislupin/Desktop/App_Chat/app/build/intermediates/res/merged/debug/values-v18_values-v18.arsc.flat",
+            "map": [
+                {
+                    "source": "/Users/kislupin/.gradle/caches/transforms-2/files-2.1/750b7b2b4898fa70c0985966489aeed6/appcompat-1.0.2/res/values-v18/values-v18.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "48",
+                        "endOffsets": "99"
+                    }
+                }
+            ]
+        },
+        {
             "outputFile": "/Users/kislupin/Desktop/App_Chat/app/build/intermediates/res/merged/debug/values-sk_values-sk.arsc.flat",
             "map": [
                 {
@@ -1484,21 +1499,6 @@
                         "startOffsets": "5778",
                         "endColumns": "100",
                         "endOffsets": "5874"
-                    }
-                }
-            ]
-        },
-        {
-            "outputFile": "/Users/kislupin/Desktop/App_Chat/app/build/intermediates/res/merged/debug/values-v18_values-v18.arsc.flat",
-            "map": [
-                {
-                    "source": "/Users/kislupin/.gradle/caches/transforms-2/files-2.1/750b7b2b4898fa70c0985966489aeed6/appcompat-1.0.2/res/values-v18/values-v18.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "48",
-                        "endOffsets": "99"
                     }
                 }
             ]

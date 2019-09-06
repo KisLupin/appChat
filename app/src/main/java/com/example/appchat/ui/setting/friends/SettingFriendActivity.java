@@ -38,6 +38,7 @@ public class SettingFriendActivity extends AppCompatActivity implements View.OnC
     private FriendChated friendChated;
     private RecyclerView rc;
     private UserService userService;
+    private ImageView ava;
     private List<MessageChatResponse> messageChatResponses;
     private FragAllImageSendedAdapter adapter;
 
@@ -50,6 +51,10 @@ public class SettingFriendActivity extends AppCompatActivity implements View.OnC
                         .getSerializableExtra(
                                 "detail");
         findViewById(R.id.backButton).setOnClickListener(this);
+        ava = findViewById(R.id.ava_in_set);
+        Glide.with(this)
+                .load(friendChated.getFriend_avatar())
+                .into(ava);
         rc = findViewById(R.id.rc_photo_in_setting_friend_chat);
         rc.setLayoutManager(new GridLayoutManager(this,3));
         adapter = new FragAllImageSendedAdapter(this);
