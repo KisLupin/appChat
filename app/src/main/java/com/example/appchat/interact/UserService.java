@@ -25,7 +25,7 @@ import retrofit2.http.Query;
 public interface UserService {
 
     @GET(value = "/users/getAllFriend")
-    Call<BaseResponse<List<FriendResponse>>> getAllFriendOfUser(
+    Call<BaseResponse<List<FriendChated>>> getAllFriendOfUser(
             @Query("userId") int userId
     );
 
@@ -91,4 +91,11 @@ public interface UserService {
             @Body AddFriendResponse addFriendResponse
     );
 
+    @GET(value = "/users/allImg")
+    Call<List<MessageChatResponse>> getImg(
+            @Query("type") String type,
+            @Query("senderId") int  senderId,
+            @Query("receiverId") int receiverId
+
+    );
 }

@@ -1,5 +1,6 @@
 package com.example.appchat.ui.main.allfriend;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -14,7 +15,10 @@ import com.example.appchat.interact.Common;
 import com.example.appchat.interact.CommonData;
 import com.example.appchat.interact.UserService;
 import com.example.appchat.model.response.BaseResponse;
+import com.example.appchat.model.response.FriendChated;
 import com.example.appchat.model.response.FriendResponse;
+import com.example.appchat.ui.chat.Chat;
+
 import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -22,7 +26,7 @@ import retrofit2.Response;
 
 public class AllFriendFrag extends Fragment implements AdapterAllFriend.IAllFriend {
 
-    private List<FriendResponse> friendResponses;
+    private List<FriendChated> friendChateds;
     private RecyclerView rc;
     private AdapterAllFriend adapter;
     private UserService userService;
@@ -49,34 +53,38 @@ public class AllFriendFrag extends Fragment implements AdapterAllFriend.IAllFrie
             return;
         }
         userService.getAllFriendOfUser(CommonData.getInstance().getUserProfile().getId())
-                .enqueue(new Callback<BaseResponse<List<FriendResponse>>>() {
+                .enqueue(new Callback<BaseResponse<List<FriendChated>>>() {
                     @Override
-                    public void onResponse(Call<BaseResponse<List<FriendResponse>>> call, Response<BaseResponse<List<FriendResponse>>> response) {
-                        friendResponses = response.body().getData();
+                    public void onResponse(Call<BaseResponse<List<FriendChated>>> call, Response<BaseResponse<List<FriendChated>>> response) {
+                        friendChateds = response.body().getData();
                         adapter.notifyDataSetChanged();
                     }
+
                     @Override
-                    public void onFailure(Call<BaseResponse<List<FriendResponse>>> call, Throwable t) {
-                        t.printStackTrace();
+                    public void onFailure(Call<BaseResponse<List<FriendChated>>> call, Throwable t) {
+
                     }
                 });
     }
 
     @Override
     public int getCount() {
-        if (friendResponses == null){
+        if (friendChateds == null){
             return 0;
         }
-        return friendResponses.size();
+        return friendChateds.size();
     }
 
     @Override
-    public FriendResponse getData(int pos) {
-        return friendResponses.get(pos);
+    public FriendChated getData(int pos) {
+        return friendChateds.get(pos);
     }
 
     @Override
     public void onClick(int pos) {
-
+        Intent intent = new Intent();
+        intent.setClass(getContext(), Chat.class);
+        intent.putExtra("FRIEND",friendChateds.get(pos));
+        startActivity(intent);
     }
 }

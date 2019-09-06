@@ -33,7 +33,7 @@
 17-->[com.google.firebase:firebase-iid:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/a83dae3f458662b66019037aabe07b28/firebase-iid-19.0.1/AndroidManifest.xml:26:22-79
 18
 19    <application
-19-->/Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:10:5-31:19
+19-->/Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:10:5-32:19
 20        android:allowBackup="true"
 20-->/Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:12:9-35
 21        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -47,8 +47,8 @@
 25-->/Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:14:9-41
 26        android:networkSecurityConfig="@xml/network_security_config"
 26-->/Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:17:9-69
-27        android:roundIcon="@mipmap/ic_launcher_round"
-27-->/Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:15:9-54
+27        android:roundIcon="@mipmap/chatapp"
+27-->/Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:15:9-44
 28        android:supportsRtl="true"
 28-->/Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:16:9-35
 29        android:testOnly="true"
@@ -83,80 +83,83 @@
 42        <activity android:name="com.example.appchat.ui.setting.friends.SettingFriendActivity" />
 42-->/Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:30:9-77
 42-->/Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:30:19-75
-43        <!--
-44             FirebaseMessagingService performs security checks at runtime,
-45             but set to not exported to explicitly avoid allowing another app to call it.
-46        -->
-47        <service
-47-->[com.google.firebase:firebase-messaging:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/5e1daeecd75fb40fe0c96ae599af4859/jetified-firebase-messaging-19.0.1/AndroidManifest.xml:28:9-34:19
-48            android:name="com.google.firebase.messaging.FirebaseMessagingService"
-48-->[com.google.firebase:firebase-messaging:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/5e1daeecd75fb40fe0c96ae599af4859/jetified-firebase-messaging-19.0.1/AndroidManifest.xml:29:13-82
-49            android:exported="false" >
-49-->[com.google.firebase:firebase-messaging:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/5e1daeecd75fb40fe0c96ae599af4859/jetified-firebase-messaging-19.0.1/AndroidManifest.xml:30:13-37
-50            <intent-filter android:priority="-500" >
-50-->[com.google.firebase:firebase-messaging:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/5e1daeecd75fb40fe0c96ae599af4859/jetified-firebase-messaging-19.0.1/AndroidManifest.xml:31:13-33:29
-50-->[com.google.firebase:firebase-messaging:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/5e1daeecd75fb40fe0c96ae599af4859/jetified-firebase-messaging-19.0.1/AndroidManifest.xml:31:28-51
-51                <action android:name="com.google.firebase.MESSAGING_EVENT" />
-51-->[com.google.firebase:firebase-messaging:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/5e1daeecd75fb40fe0c96ae599af4859/jetified-firebase-messaging-19.0.1/AndroidManifest.xml:32:17-78
-51-->[com.google.firebase:firebase-messaging:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/5e1daeecd75fb40fe0c96ae599af4859/jetified-firebase-messaging-19.0.1/AndroidManifest.xml:32:25-75
-52            </intent-filter>
-53        </service>
-54        <service
-54-->[com.google.firebase:firebase-iid:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/a83dae3f458662b66019037aabe07b28/firebase-iid-19.0.1/AndroidManifest.xml:29:9-35:19
-55            android:name="com.google.firebase.components.ComponentDiscoveryService"
-55-->[com.google.firebase:firebase-iid:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/a83dae3f458662b66019037aabe07b28/firebase-iid-19.0.1/AndroidManifest.xml:30:13-84
-56            android:exported="false" >
-56-->[com.google.firebase:firebase-iid:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/a83dae3f458662b66019037aabe07b28/firebase-iid-19.0.1/AndroidManifest.xml:31:13-37
-57            <meta-data
-57-->[com.google.firebase:firebase-iid:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/a83dae3f458662b66019037aabe07b28/firebase-iid-19.0.1/AndroidManifest.xml:32:13-34:85
-58                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
-58-->[com.google.firebase:firebase-iid:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/a83dae3f458662b66019037aabe07b28/firebase-iid-19.0.1/AndroidManifest.xml:33:17-96
-59                android:value="com.google.firebase.components.ComponentRegistrar" />
-59-->[com.google.firebase:firebase-iid:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/a83dae3f458662b66019037aabe07b28/firebase-iid-19.0.1/AndroidManifest.xml:34:17-82
-60        </service>
-61
-62        <receiver
-62-->[com.google.firebase:firebase-iid:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/a83dae3f458662b66019037aabe07b28/firebase-iid-19.0.1/AndroidManifest.xml:37:9-44:20
-63            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
-63-->[com.google.firebase:firebase-iid:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/a83dae3f458662b66019037aabe07b28/firebase-iid-19.0.1/AndroidManifest.xml:38:13-78
-64            android:exported="true"
-64-->[com.google.firebase:firebase-iid:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/a83dae3f458662b66019037aabe07b28/firebase-iid-19.0.1/AndroidManifest.xml:39:13-36
-65            android:permission="com.google.android.c2dm.permission.SEND" >
-65-->[com.google.firebase:firebase-iid:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/a83dae3f458662b66019037aabe07b28/firebase-iid-19.0.1/AndroidManifest.xml:40:13-73
-66            <intent-filter>
-66-->[com.google.firebase:firebase-iid:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/a83dae3f458662b66019037aabe07b28/firebase-iid-19.0.1/AndroidManifest.xml:41:13-43:29
-67                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
-67-->[com.google.firebase:firebase-iid:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/a83dae3f458662b66019037aabe07b28/firebase-iid-19.0.1/AndroidManifest.xml:42:17-81
-67-->[com.google.firebase:firebase-iid:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/a83dae3f458662b66019037aabe07b28/firebase-iid-19.0.1/AndroidManifest.xml:42:25-78
-68            </intent-filter>
-69        </receiver>
-70
-71        <provider
-71-->[com.google.firebase:firebase-common:18.0.0] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/d91e6a618283f3921b150aa21cf77e73/firebase-common-18.0.0/AndroidManifest.xml:12:9-16:39
-72            android:name="com.google.firebase.provider.FirebaseInitProvider"
-72-->[com.google.firebase:firebase-common:18.0.0] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/d91e6a618283f3921b150aa21cf77e73/firebase-common-18.0.0/AndroidManifest.xml:13:13-77
-73            android:authorities="com.example.appchat.firebaseinitprovider"
-73-->[com.google.firebase:firebase-common:18.0.0] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/d91e6a618283f3921b150aa21cf77e73/firebase-common-18.0.0/AndroidManifest.xml:14:13-72
-74            android:exported="false"
-74-->[com.google.firebase:firebase-common:18.0.0] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/d91e6a618283f3921b150aa21cf77e73/firebase-common-18.0.0/AndroidManifest.xml:15:13-37
-75            android:initOrder="100" />
-75-->[com.google.firebase:firebase-common:18.0.0] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/d91e6a618283f3921b150aa21cf77e73/firebase-common-18.0.0/AndroidManifest.xml:16:13-36
-76
-77        <activity
-77-->[com.google.android.gms:play-services-base:17.0.0] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/ceaf9a129f8ccf062cdd379f05a049a3/play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
-78            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-78-->[com.google.android.gms:play-services-base:17.0.0] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/ceaf9a129f8ccf062cdd379f05a049a3/play-services-base-17.0.0/AndroidManifest.xml:24:13-79
-79            android:exported="false"
-79-->[com.google.android.gms:play-services-base:17.0.0] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/ceaf9a129f8ccf062cdd379f05a049a3/play-services-base-17.0.0/AndroidManifest.xml:25:13-37
-80            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-80-->[com.google.android.gms:play-services-base:17.0.0] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/ceaf9a129f8ccf062cdd379f05a049a3/play-services-base-17.0.0/AndroidManifest.xml:26:13-72
-81
-82        <meta-data
-82-->[com.google.android.gms:play-services-basement:17.0.0] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/8a0dfe11305f492f692906ae538b83e7/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
-83            android:name="com.google.android.gms.version"
-83-->[com.google.android.gms:play-services-basement:17.0.0] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/8a0dfe11305f492f692906ae538b83e7/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
-84            android:value="@integer/google_play_services_version" />
-84-->[com.google.android.gms:play-services-basement:17.0.0] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/8a0dfe11305f492f692906ae538b83e7/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
-85    </application>
-86
-87</manifest>
+43        <activity android:name="com.example.appchat.ui.logout.ActivityLogout" />
+43-->/Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:31:9-61
+43-->/Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:31:19-59
+44        <!--
+45             FirebaseMessagingService performs security checks at runtime,
+46             but set to not exported to explicitly avoid allowing another app to call it.
+47        -->
+48        <service
+48-->[com.google.firebase:firebase-messaging:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/5e1daeecd75fb40fe0c96ae599af4859/jetified-firebase-messaging-19.0.1/AndroidManifest.xml:28:9-34:19
+49            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+49-->[com.google.firebase:firebase-messaging:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/5e1daeecd75fb40fe0c96ae599af4859/jetified-firebase-messaging-19.0.1/AndroidManifest.xml:29:13-82
+50            android:exported="false" >
+50-->[com.google.firebase:firebase-messaging:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/5e1daeecd75fb40fe0c96ae599af4859/jetified-firebase-messaging-19.0.1/AndroidManifest.xml:30:13-37
+51            <intent-filter android:priority="-500" >
+51-->[com.google.firebase:firebase-messaging:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/5e1daeecd75fb40fe0c96ae599af4859/jetified-firebase-messaging-19.0.1/AndroidManifest.xml:31:13-33:29
+51-->[com.google.firebase:firebase-messaging:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/5e1daeecd75fb40fe0c96ae599af4859/jetified-firebase-messaging-19.0.1/AndroidManifest.xml:31:28-51
+52                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+52-->[com.google.firebase:firebase-messaging:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/5e1daeecd75fb40fe0c96ae599af4859/jetified-firebase-messaging-19.0.1/AndroidManifest.xml:32:17-78
+52-->[com.google.firebase:firebase-messaging:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/5e1daeecd75fb40fe0c96ae599af4859/jetified-firebase-messaging-19.0.1/AndroidManifest.xml:32:25-75
+53            </intent-filter>
+54        </service>
+55        <service
+55-->[com.google.firebase:firebase-iid:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/a83dae3f458662b66019037aabe07b28/firebase-iid-19.0.1/AndroidManifest.xml:29:9-35:19
+56            android:name="com.google.firebase.components.ComponentDiscoveryService"
+56-->[com.google.firebase:firebase-iid:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/a83dae3f458662b66019037aabe07b28/firebase-iid-19.0.1/AndroidManifest.xml:30:13-84
+57            android:exported="false" >
+57-->[com.google.firebase:firebase-iid:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/a83dae3f458662b66019037aabe07b28/firebase-iid-19.0.1/AndroidManifest.xml:31:13-37
+58            <meta-data
+58-->[com.google.firebase:firebase-iid:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/a83dae3f458662b66019037aabe07b28/firebase-iid-19.0.1/AndroidManifest.xml:32:13-34:85
+59                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+59-->[com.google.firebase:firebase-iid:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/a83dae3f458662b66019037aabe07b28/firebase-iid-19.0.1/AndroidManifest.xml:33:17-96
+60                android:value="com.google.firebase.components.ComponentRegistrar" />
+60-->[com.google.firebase:firebase-iid:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/a83dae3f458662b66019037aabe07b28/firebase-iid-19.0.1/AndroidManifest.xml:34:17-82
+61        </service>
+62
+63        <receiver
+63-->[com.google.firebase:firebase-iid:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/a83dae3f458662b66019037aabe07b28/firebase-iid-19.0.1/AndroidManifest.xml:37:9-44:20
+64            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+64-->[com.google.firebase:firebase-iid:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/a83dae3f458662b66019037aabe07b28/firebase-iid-19.0.1/AndroidManifest.xml:38:13-78
+65            android:exported="true"
+65-->[com.google.firebase:firebase-iid:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/a83dae3f458662b66019037aabe07b28/firebase-iid-19.0.1/AndroidManifest.xml:39:13-36
+66            android:permission="com.google.android.c2dm.permission.SEND" >
+66-->[com.google.firebase:firebase-iid:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/a83dae3f458662b66019037aabe07b28/firebase-iid-19.0.1/AndroidManifest.xml:40:13-73
+67            <intent-filter>
+67-->[com.google.firebase:firebase-iid:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/a83dae3f458662b66019037aabe07b28/firebase-iid-19.0.1/AndroidManifest.xml:41:13-43:29
+68                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+68-->[com.google.firebase:firebase-iid:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/a83dae3f458662b66019037aabe07b28/firebase-iid-19.0.1/AndroidManifest.xml:42:17-81
+68-->[com.google.firebase:firebase-iid:19.0.1] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/a83dae3f458662b66019037aabe07b28/firebase-iid-19.0.1/AndroidManifest.xml:42:25-78
+69            </intent-filter>
+70        </receiver>
+71
+72        <provider
+72-->[com.google.firebase:firebase-common:18.0.0] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/d91e6a618283f3921b150aa21cf77e73/firebase-common-18.0.0/AndroidManifest.xml:12:9-16:39
+73            android:name="com.google.firebase.provider.FirebaseInitProvider"
+73-->[com.google.firebase:firebase-common:18.0.0] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/d91e6a618283f3921b150aa21cf77e73/firebase-common-18.0.0/AndroidManifest.xml:13:13-77
+74            android:authorities="com.example.appchat.firebaseinitprovider"
+74-->[com.google.firebase:firebase-common:18.0.0] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/d91e6a618283f3921b150aa21cf77e73/firebase-common-18.0.0/AndroidManifest.xml:14:13-72
+75            android:exported="false"
+75-->[com.google.firebase:firebase-common:18.0.0] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/d91e6a618283f3921b150aa21cf77e73/firebase-common-18.0.0/AndroidManifest.xml:15:13-37
+76            android:initOrder="100" />
+76-->[com.google.firebase:firebase-common:18.0.0] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/d91e6a618283f3921b150aa21cf77e73/firebase-common-18.0.0/AndroidManifest.xml:16:13-36
+77
+78        <activity
+78-->[com.google.android.gms:play-services-base:17.0.0] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/ceaf9a129f8ccf062cdd379f05a049a3/play-services-base-17.0.0/AndroidManifest.xml:23:9-26:75
+79            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+79-->[com.google.android.gms:play-services-base:17.0.0] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/ceaf9a129f8ccf062cdd379f05a049a3/play-services-base-17.0.0/AndroidManifest.xml:24:13-79
+80            android:exported="false"
+80-->[com.google.android.gms:play-services-base:17.0.0] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/ceaf9a129f8ccf062cdd379f05a049a3/play-services-base-17.0.0/AndroidManifest.xml:25:13-37
+81            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+81-->[com.google.android.gms:play-services-base:17.0.0] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/ceaf9a129f8ccf062cdd379f05a049a3/play-services-base-17.0.0/AndroidManifest.xml:26:13-72
+82
+83        <meta-data
+83-->[com.google.android.gms:play-services-basement:17.0.0] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/8a0dfe11305f492f692906ae538b83e7/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+84            android:name="com.google.android.gms.version"
+84-->[com.google.android.gms:play-services-basement:17.0.0] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/8a0dfe11305f492f692906ae538b83e7/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+85            android:value="@integer/google_play_services_version" />
+85-->[com.google.android.gms:play-services-basement:17.0.0] /Users/kislupin/.gradle/caches/transforms-2/files-2.1/8a0dfe11305f492f692906ae538b83e7/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+86    </application>
+87
+88</manifest>

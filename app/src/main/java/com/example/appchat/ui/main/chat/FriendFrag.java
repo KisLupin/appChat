@@ -75,7 +75,7 @@ public class FriendFrag extends Fragment implements FriendAdapter.IFriend {
     private void getAllLastMess(){
         lastMess = new ArrayList<>();
         for (int i = 0; i < friendResponses.size(); i++) {
-            lastMess.add(new LastMess(CommonData.getInstance().getUserProfile().getId(),friendResponses.get(i).getFriendId()));
+            lastMess.add(new LastMess(CommonData.getInstance().getUserProfile().getId(),friendResponses.get(i).getFriend_id()));
         }
         userService.getAllLastMess(lastMess).enqueue(new Callback<List<MessageChatResponse>>() {
             @Override

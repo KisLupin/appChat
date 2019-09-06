@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import com.bumptech.glide.Glide;
 import com.example.appchat.R;
+import com.example.appchat.model.response.FriendChated;
 import com.example.appchat.model.response.FriendResponse;
 
 public class AdapterAllFriend extends RecyclerView.Adapter<AdapterAllFriend.Holder> {
@@ -30,13 +31,13 @@ public class AdapterAllFriend extends RecyclerView.Adapter<AdapterAllFriend.Hold
 
     @Override
     public void onBindViewHolder(@NonNull final Holder holder, int position) {
-        FriendResponse friendResponse = inter.getData(position);
+        FriendChated friendChated = inter.getData(position);
 
         Glide.with(holder.avatar)
-                .load(friendResponse.getFriendAvatar())
+                .load(friendChated.getFriend_avatar())
                 .into(holder.avatar);
 
-        holder.name.setText(friendResponse.getFriendNameofchat());
+        holder.name.setText(friendChated.getFriend_nameofchat());
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,7 +54,7 @@ public class AdapterAllFriend extends RecyclerView.Adapter<AdapterAllFriend.Hold
 
     public interface IAllFriend{
         int getCount();
-        FriendResponse getData(int pos);
+        FriendChated getData(int pos);
         void onClick(int pos);
     }
 

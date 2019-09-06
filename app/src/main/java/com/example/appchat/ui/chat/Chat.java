@@ -24,7 +24,9 @@ import com.example.appchat.model.response.MessageChatResponse;
 import com.example.appchat.socket.ReceiverMess;
 import com.example.appchat.socket.SocketManager;
 import com.example.appchat.ui.gallery.ImageGalleryActivity;
+import com.example.appchat.ui.main.allfriend.AllFriendFrag;
 import com.example.appchat.ui.setting.friends.SettingFriendActivity;
+import com.example.appchat.ui.utils.UtilsCommon;
 import com.google.gson.Gson;
 
 import java.io.File;
@@ -62,6 +64,8 @@ public class Chat extends AppCompatActivity implements AdapterChat.IChat, View.O
                 (FriendChated) getIntent()
                         .getSerializableExtra(
                                 "FRIEND");
+
+
         findViewById(R.id.back_main).setOnClickListener(this);
         findViewById(R.id.send_mess).setOnClickListener(this);
         init();
@@ -74,7 +78,6 @@ public class Chat extends AppCompatActivity implements AdapterChat.IChat, View.O
         Glide.with(this)
                 .load(friendChated.getFriend_avatar())
                 .error(R.drawable.default_ava)
-                .placeholder(R.drawable.default_ava)
                 .into((ImageView)
                         findViewById(R.id.click_setting_fri_chat));
         ((TextView) findViewById(R.id.name_or_nickname)).setText(CommonData.getInstance()
@@ -122,6 +125,11 @@ public class Chat extends AppCompatActivity implements AdapterChat.IChat, View.O
     }
 
     @Override
+    public String img() {
+        return friendChated.getFriend_avatar();
+    }
+
+    @Override
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.send_mess:
@@ -147,7 +155,8 @@ public class Chat extends AppCompatActivity implements AdapterChat.IChat, View.O
     }
 
     private void sendImage(String path) {
-        File file = new File(path);
+        String newPath = UtilsCommon.getFileImageToUpload(path);
+        final File file = new File(newPath);
         RequestBody requestFile =
                 RequestBody.create(
                         MediaType.parse("image/*"),
@@ -155,6 +164,7 @@ public class Chat extends AppCompatActivity implements AdapterChat.IChat, View.O
                 );
         MultipartBody.Part body =
                 MultipartBody.Part.createFormData("image", file.getName(), requestFile);
+
         userService.upload(body)
                 .enqueue(new Callback<String>() {
                     @Override
@@ -172,11 +182,12 @@ public class Chat extends AppCompatActivity implements AdapterChat.IChat, View.O
                         SocketManager.getInstance().sendMessage(
                                 new Gson().toJson(mes)
                         );
+                        file.delete();
                     }
 
                     @Override
                     public void onFailure(Call<String> call, Throwable t) {
-
+                        file.delete();
                     }
                 });
     }

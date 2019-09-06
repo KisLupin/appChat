@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -17,6 +18,7 @@ import com.example.appchat.interact.UserService;
 import com.example.appchat.model.UserProfile;
 import com.example.appchat.model.request.UpdateAvatar;
 import com.example.appchat.ui.gallery.ImageGalleryActivity;
+import com.example.appchat.ui.logout.ActivityLogout;
 
 import java.io.File;
 
@@ -34,6 +36,7 @@ public class ManagerUserProfileFrag extends AppCompatActivity implements View.On
     private ImageView ava;
     private TextView phonenumber;
     private UserService userService;
+    private LinearLayout logout;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -53,6 +56,7 @@ public class ManagerUserProfileFrag extends AppCompatActivity implements View.On
                 .into(ava);
 
         userService = Common.getUserService();
+        findViewById(R.id.logout).setOnClickListener(this);
 
     }
 
@@ -69,6 +73,12 @@ public class ManagerUserProfileFrag extends AppCompatActivity implements View.On
                 break;
             case R.id.phone_setting:
                 break;
+            case R.id.logout:
+                Intent intent1 = new Intent();
+                intent1.setClass(this, ActivityLogout.class);
+                startActivity(intent1);
+                break;
+                default: break;
         }
     }
 
@@ -120,4 +130,5 @@ public class ManagerUserProfileFrag extends AppCompatActivity implements View.On
                     }
                 });
     }
+
 }

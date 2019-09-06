@@ -12,28 +12,28 @@ public final class R {
     public static final class attr {
         private attr() {}
 
-        public static final int bottomEdgeSwipeOffset = 0x7f03004f;
-        public static final int clickToClose = 0x7f030090;
-        public static final int drag_edge = 0x7f0300df;
-        public static final int leftEdgeSwipeOffset = 0x7f030183;
-        public static final int rightEdgeSwipeOffset = 0x7f0301d3;
-        public static final int show_mode = 0x7f0301f8;
-        public static final int topEdgeSwipeOffset = 0x7f030270;
+        public static final int bottomEdgeSwipeOffset = 0x7f030050;
+        public static final int clickToClose = 0x7f030092;
+        public static final int drag_edge = 0x7f0300e3;
+        public static final int leftEdgeSwipeOffset = 0x7f03018e;
+        public static final int rightEdgeSwipeOffset = 0x7f0301f0;
+        public static final int show_mode = 0x7f030217;
+        public static final int topEdgeSwipeOffset = 0x7f03028c;
     }
     public static final class id {
         private id() {}
 
-        public static final int bottom = 0x7f080030;
-        public static final int lay_down = 0x7f080092;
-        public static final int left = 0x7f080093;
-        public static final int pull_out = 0x7f0800c4;
-        public static final int right = 0x7f0800d1;
-        public static final int top = 0x7f080127;
+        public static final int bottom = 0x7f080036;
+        public static final int lay_down = 0x7f08009a;
+        public static final int left = 0x7f08009b;
+        public static final int pull_out = 0x7f0800cf;
+        public static final int right = 0x7f0800dd;
+        public static final int top = 0x7f080134;
     }
     public static final class styleable {
         private styleable() {}
 
-        public static final int[] SwipeLayout = { 0x7f03004f, 0x7f030090, 0x7f0300df, 0x7f030183, 0x7f0301d3, 0x7f0301f8, 0x7f030270 };
+        public static final int[] SwipeLayout = { 0x7f030050, 0x7f030092, 0x7f0300e3, 0x7f03018e, 0x7f0301f0, 0x7f030217, 0x7f03028c };
         public static final int SwipeLayout_bottomEdgeSwipeOffset = 0;
         public static final int SwipeLayout_clickToClose = 1;
         public static final int SwipeLayout_drag_edge = 2;

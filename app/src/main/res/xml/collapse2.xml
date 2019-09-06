@@ -7,8 +7,7 @@
     <Transition
         app:constraintSetEnd="@layout/frag_collapse_meta_end"
         app:constraintSetStart="@layout/frag_setting_friend_chat"
-        app:duration="500"
-        motion:interpolator="linear">
+        app:duration="500">
 
         <OnSwipe
             app:dragDirection="dragUp"

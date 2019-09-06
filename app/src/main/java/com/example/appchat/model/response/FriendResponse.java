@@ -4,49 +4,49 @@ import java.io.Serializable;
 
 public class FriendResponse implements Serializable {
 
-    private int id;
-    private int friendId;
-    private String friendNameofchat;
-    private String friendUsername;
-    private String friendAvatar;
+    private int friend_id;
+    private String friend_nameofchat;
+    private String friend_username;
+    private String friend_avatar;
+    private String phone;
 
-    public String getFriendUsername() {
-        return friendUsername;
+    public int getFriend_id() {
+        return friend_id;
     }
 
-    public void setFriendUsername(String friendUsername) {
-        this.friendUsername = friendUsername;
+    public void setFriend_id(int friend_id) {
+        this.friend_id = friend_id;
     }
 
-    public int getId() {
-        return id;
+    public String getFriend_nameofchat() {
+        return friend_nameofchat;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setFriend_nameofchat(String friend_nameofchat) {
+        this.friend_nameofchat = friend_nameofchat;
     }
 
-    public int getFriendId() {
-        return friendId;
+    public String getFriend_username() {
+        return friend_username;
     }
 
-    public void setFriendId(int friendId) {
-        this.friendId = friendId;
+    public void setFriend_username(String friend_username) {
+        this.friend_username = friend_username;
     }
 
-    public String getFriendNameofchat() {
-        return friendNameofchat;
+    public String getFriend_avatar() {
+        return friend_avatar;
     }
 
-    public void setFriendNameofchat(String friendNameofchat) {
-        this.friendNameofchat = friendNameofchat;
+    public void setFriend_avatar(String friend_avatar) {
+        this.friend_avatar = friend_avatar;
     }
 
-    public String getFriendAvatar() {
-        return friendAvatar;
+    public String getPhone() {
+        return phone;
     }
 
-    public void setFriendAvatar(String friendAvatar) {
-        this.friendAvatar = friendAvatar;
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 }
