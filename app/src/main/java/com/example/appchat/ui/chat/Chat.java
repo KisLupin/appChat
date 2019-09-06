@@ -25,6 +25,7 @@ import com.example.appchat.socket.ReceiverMess;
 import com.example.appchat.socket.SocketManager;
 import com.example.appchat.ui.gallery.ImageGalleryActivity;
 import com.example.appchat.ui.main.allfriend.AllFriendFrag;
+import com.example.appchat.ui.setting.friends.ChooseUnfriend;
 import com.example.appchat.ui.setting.friends.SettingFriendActivity;
 import com.example.appchat.ui.utils.UtilsCommon;
 import com.google.gson.Gson;
@@ -40,7 +41,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class Chat extends AppCompatActivity implements AdapterChat.IChat, View.OnClickListener, ReceiverMess {
+public class Chat extends AppCompatActivity implements AdapterChat.IChat, View.OnClickListener, ReceiverMess  {
 
     private RecyclerView rc;
     private AdapterChat adapter;

@@ -1,5 +1,6 @@
 package com.example.appchat.ui.setting.friends;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.UserManager;
 import android.view.LayoutInflater;
@@ -25,6 +26,7 @@ import com.example.appchat.model.LastMess;
 import com.example.appchat.model.response.FriendChated;
 import com.example.appchat.model.response.FriendResponse;
 import com.example.appchat.model.response.MessageChatResponse;
+import com.example.appchat.ui.chat.ShowImageFrag;
 
 import java.util.List;
 
@@ -33,7 +35,7 @@ import retrofit2.Callback;
 import retrofit2.Response;
 
 
-public class SettingFriendActivity extends AppCompatActivity implements View.OnClickListener, FragAllImageSendedAdapter.IIMage {
+public class SettingFriendActivity extends AppCompatActivity implements View.OnClickListener, FragAllImageSendedAdapter.IIMage, ChooseUnfriend.Remove {
 
     private FriendChated friendChated;
     private RecyclerView rc;
@@ -41,6 +43,7 @@ public class SettingFriendActivity extends AppCompatActivity implements View.OnC
     private ImageView ava;
     private List<MessageChatResponse> messageChatResponses;
     private FragAllImageSendedAdapter adapter;
+    private ChooseUnfriend chooseUnfriend;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -59,7 +62,14 @@ public class SettingFriendActivity extends AppCompatActivity implements View.OnC
         rc.setLayoutManager(new GridLayoutManager(this,3));
         adapter = new FragAllImageSendedAdapter(this);
         rc.setAdapter(adapter);
+        findViewById(R.id.unfriend).setOnClickListener(this);
+        chooseUnfriend = new ChooseUnfriend(this);
         getAllImage();
+    }
+
+    @Override
+    public int sendID() {
+        return friendChated.getFriend_id();
     }
 
     @Override
@@ -68,6 +78,10 @@ public class SettingFriendActivity extends AppCompatActivity implements View.OnC
             case R.id.backButton:
                 finish();
                 break;
+            case R.id.unfriend:
+                getSupportFragmentManager().beginTransaction()
+                        .add(R.id.frag_choose,new ChooseUnfriend(this),ChooseUnfriend.class.getName())
+                        .commit();
                 default:
                     break;
         }
@@ -111,6 +125,15 @@ public class SettingFriendActivity extends AppCompatActivity implements View.OnC
 
     @Override
     public void onClick(int pos) {
+        Intent intent = new Intent();
+        intent.putExtra("PATH",messageChatResponses.get(pos).getContent());
+        intent.setClass(this, ShowImageFrag.class);
+        startActivity(intent);
+    }
+
+    @Override
+    public void onAttachFragment(Fragment fragment) {
+        super.onAttachFragment(fragment);
 
     }
 }

@@ -1170,6 +1170,7 @@ drawable avd_hide_password
 drawable avd_show_password
 drawable back
 drawable background_darkmode
+drawable box2
 drawable box_chat
 drawable box_edittext
 drawable box_insert_chat
@@ -1260,6 +1261,7 @@ id SHOW_PROGRESS
 id SYM
 id aaa
 id accelerate
+id accept
 id action0
 id action_bar
 id action_bar_activity_content
@@ -1300,6 +1302,7 @@ id avatar_main
 id back
 id backButton
 id back_main
+id back_set
 id barrier
 id beginning
 id blocking
@@ -1376,6 +1379,7 @@ id fixed
 id flip
 id forever
 id forget
+id frag_choose
 id frag_story_friend
 id frame
 id ghost_view
@@ -1575,6 +1579,7 @@ id tv_
 id tv_chat
 id tv_namestory
 id tv_username
+id unfriend
 id uniform
 id unlabeled
 id up
@@ -1644,6 +1649,7 @@ layout activity_main
 layout adapter_all_friends
 layout adapter_friend_wait_response
 layout all_friend_frag
+layout choose_unfriend
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
 layout design_layout_snackbar

@@ -103,4 +103,10 @@ public interface UserService {
             @Query("receiverId") int receiverId
 
     );
+
+    @POST(value = "/users/removeFriend")
+    Call<BaseResponse> removeFriend(
+            @Query("sender_id") int sender_id,
+            @Query("receiver_id") int receiver_id
+    );
 }
