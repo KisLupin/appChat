@@ -18,7 +18,7 @@ public class Common {
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Constant.duphong)
                 .addConverterFactory(GsonConverterFactory.create(gson))
-                .client(  new OkHttpClient.Builder()
+                .client( new OkHttpClient.Builder()
                         .connectTimeout(10, TimeUnit.MINUTES)
                         .writeTimeout(10, TimeUnit.MINUTES)
                         .readTimeout(30, TimeUnit.MINUTES)

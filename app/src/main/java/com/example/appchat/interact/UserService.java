@@ -109,4 +109,9 @@ public interface UserService {
             @Query("sender_id") int sender_id,
             @Query("receiver_id") int receiver_id
     );
+
+    @POST(value = "/users/saveMess")
+    Call<BaseResponse> save(
+            @Body MessageChatResponse messageChatResponse
+    );
 }

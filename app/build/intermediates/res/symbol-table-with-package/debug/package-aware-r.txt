@@ -1317,7 +1317,6 @@ id btn_decline
 id btn_login
 id btn_register
 id buttonPanel
-id call_video
 id cancel_action
 id center
 id center_horizontal
@@ -1462,6 +1461,7 @@ id pin
 id position
 id progress_circular
 id progress_horizontal
+id progressbar
 id pull_out
 id radio
 id ratio
@@ -1712,6 +1712,7 @@ layout story_chat_item
 layout support_simple_spinner_dropdown_item
 layout switch_logout
 layout user_chat
+mipmap avaapp
 mipmap chatapp
 mipmap ic_launcher
 mipmap ic_launcher_round

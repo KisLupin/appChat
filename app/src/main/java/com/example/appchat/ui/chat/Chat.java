@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -49,6 +50,7 @@ public class Chat extends AppCompatActivity implements AdapterChat.IChat, View.O
     private List<MessageChatResponse> messages;
     private FriendChated friendChated;
     private UserService userService;
+    private ProgressBar progressBar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -65,14 +67,14 @@ public class Chat extends AppCompatActivity implements AdapterChat.IChat, View.O
                 (FriendChated) getIntent()
                         .getSerializableExtra(
                                 "FRIEND");
-
-
         findViewById(R.id.back_main).setOnClickListener(this);
         findViewById(R.id.send_mess).setOnClickListener(this);
         init();
         SocketManager.getInstance().register(this);
         findViewById(R.id.take_photo_in_mess).setOnClickListener(this);
         findViewById(R.id.make_configure).setOnClickListener(this);
+        progressBar = findViewById(R.id.progressbar);
+        progressBar.setVisibility(View.INVISIBLE);
     }
 
     private void init() {
@@ -165,7 +167,7 @@ public class Chat extends AppCompatActivity implements AdapterChat.IChat, View.O
                 );
         MultipartBody.Part body =
                 MultipartBody.Part.createFormData("image", file.getName(), requestFile);
-
+        progressBar.setVisibility(View.VISIBLE);
         userService.upload(body)
                 .enqueue(new Callback<String>() {
                     @Override
@@ -177,6 +179,23 @@ public class Chat extends AppCompatActivity implements AdapterChat.IChat, View.O
                         mes.setType(MessageChatResponse.TYPE_IMG);
                         mes.setContent(response.body());
                         messages.add(mes);
+                        adapter.notifyItemInserted(messages.size() - 1);
+                        rc.smoothScrollToPosition(messages.size() - 1);
+
+                        SocketManager.getInstance().sendMessage(
+                                new Gson().toJson(mes)
+                        );
+                        userService.save(mes).enqueue(new Callback<BaseResponse>() {
+                            @Override
+                            public void onResponse(Call<BaseResponse> call, Response<BaseResponse> response) {
+                                System.out.println(response.body().getMessage());
+                            }
+
+                            @Override
+                            public void onFailure(Call<BaseResponse> call, Throwable t) {
+
+                            }
+                        });
                         adapter.notifyItemInserted(messages.size()-1);
                         rc.smoothScrollToPosition(messages.size()-1);
 
@@ -184,6 +203,7 @@ public class Chat extends AppCompatActivity implements AdapterChat.IChat, View.O
                                 new Gson().toJson(mes)
                         );
                         file.delete();
+                        progressBar.setVisibility(View.GONE);
                     }
 
                     @Override
@@ -221,6 +241,17 @@ public class Chat extends AppCompatActivity implements AdapterChat.IChat, View.O
         SocketManager.getInstance().sendMessage(
                 new Gson().toJson(message)
         );
+        userService.save(message).enqueue(new Callback<BaseResponse>() {
+            @Override
+            public void onResponse(Call<BaseResponse> call, Response<BaseResponse> response) {
+                System.out.println(response.body().getMessage());
+            }
+
+            @Override
+            public void onFailure(Call<BaseResponse> call, Throwable t) {
+
+            }
+        });
         editText.setText("");
     }
 

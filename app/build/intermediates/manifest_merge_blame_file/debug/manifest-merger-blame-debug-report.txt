@@ -47,8 +47,8 @@
 25-->/Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:14:9-41
 26        android:networkSecurityConfig="@xml/network_security_config"
 26-->/Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:17:9-69
-27        android:roundIcon="@mipmap/chatapp"
-27-->/Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:15:9-44
+27        android:roundIcon="@mipmap/avaapp"
+27-->/Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:15:9-43
 28        android:supportsRtl="true"
 28-->/Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:16:9-35
 29        android:testOnly="true"

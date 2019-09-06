@@ -29,7 +29,6 @@ import retrofit2.Response;
 public class FriendFrag extends Fragment implements FriendAdapter.IFriend {
 
     private RecyclerView rcFriend;
-    private List<FriendResponse> friendResponses;
     private List<FriendChated> friendChateds;
     private FriendAdapter adapter;
     private  UserService userService;
@@ -62,6 +61,7 @@ public class FriendFrag extends Fragment implements FriendAdapter.IFriend {
                     public void onResponse(Call<List<FriendChated>> call, Response<List<FriendChated>> response) {
                         friendChateds = response.body();
                         adapter.notifyDataSetChanged();
+                        getAllLastMess();
                     }
 
                     @Override
@@ -74,8 +74,11 @@ public class FriendFrag extends Fragment implements FriendAdapter.IFriend {
 
     private void getAllLastMess(){
         lastMess = new ArrayList<>();
-        for (int i = 0; i < friendResponses.size(); i++) {
-            lastMess.add(new LastMess(CommonData.getInstance().getUserProfile().getId(),friendResponses.get(i).getFriend_id()));
+        if (friendChateds == null){
+            return;
+        }
+        for (int i = 0; i < friendChateds.size(); i++) {
+            lastMess.add(new LastMess(CommonData.getInstance().getUserProfile().getId(),friendChateds.get(i).getFriend_id()));
         }
         userService.getAllLastMess(lastMess).enqueue(new Callback<List<MessageChatResponse>>() {
             @Override
@@ -117,6 +120,5 @@ public class FriendFrag extends Fragment implements FriendAdapter.IFriend {
 //    public MessageChatResponse getMes(int pos) {
 //        return messageChatResponses.get(pos);
 //    }
-
 
 }

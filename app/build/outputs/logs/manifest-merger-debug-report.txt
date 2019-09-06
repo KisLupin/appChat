@@ -132,7 +132,7 @@ MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/kislupin/.gradle
 	android:hardwareAccelerated
 		ADDED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:11:9-43
 	android:roundIcon
-		ADDED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:15:9-44
+		ADDED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:15:9-43
 	android:icon
 		ADDED from /Users/kislupin/Desktop/App_Chat/app/src/main/AndroidManifest.xml:13:9-43
 	android:allowBackup

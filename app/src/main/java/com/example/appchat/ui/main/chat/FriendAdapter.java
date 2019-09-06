@@ -44,11 +44,14 @@ public class FriendAdapter extends RecyclerView.Adapter<FriendAdapter.HolderFrie
 //        if (mess == null)
 //        {
 //            return;
-//        }else if (mess.getType().equals("IMG")){
+//        }else
+//            if (mess.getType().equals("IMG")){
 //            holderFriend.lastMess.setText("");
-//        }else if (mess.getContent().length()>30){
+//        }else
+//            if (mess.getContent().length()>30){
 //            holderFriend.lastMess.setText(mess.getContent().substring(0,30)+"...");
 //        }else holderFriend.lastMess.setText(mess.getContent());
+
         holderFriend.itemView.setOnClickListener(
                 new View.OnClickListener() {
             @Override
